@@ -1,0 +1,508 @@
+$grid__bp--md: 768;
+$grid__cols: 12;
+
+.container {
+  max-width: $grid__bp--md * 2px;
+  margin: 0 auto;
+  &--fluid {
+    margin: 0;
+    max-width: 100%;
+  }
+  &__row {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    align-content: center;
+  }
+  @for $i from 1 through $grid__cols {
+    &__col-sm-#{$i} {
+      flex-basis: (100 / ($grid__cols / $i) ) * 1%;
+    }
+  }
+  @media screen and (min-width: $grid__bp--md * 1px) {
+    @for $i from 1 through $grid__cols {
+      &__col-md-#{$i} {
+        flex-basis: (100 / ($grid__cols / $i) ) * 1%;
+      }
+    }
+  }
+}
+
+//Styling of grid for demostration purposes
+.container {
+  background-color: lightblue;
+  padding: 5px;
+  box-sizing: border-box;
+  &__row {
+    
+  }
+  @at-root {
+    [class*='container__col-'] {
+      width: 150px;
+      height: 200px;
+      margin: 10px 0;
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+    }
+  }
+}
+
+/*header {
+  margin: 0px auto;
+  padding: 0px 0px 30px 0px;
+}
+
+.textbackground {
+  background-image: url("../dist/img/KirbyCloudTile.jpg");
+  border-radius: 25px;
+}
+
+.section1 {
+  background-image: url("../dist/img/Kirby'sDreamland2.png");
+}*/
+
+/*.section2 {
+  background-image: url("../dist/img/kirbyBackground.png");
+}
+
+.section3 {
+  background-image: url("../dist/img/KirbyBanner.png");
+}
+
+#title {
+  text-align: center;
+  font-size: 80px;
+  margin: 0px auto;
+  padding: 10px;
+}
+
+#subtitle {
+  text-align: center;
+  font-size: 20px;
+  margin: 0px auto;
+  padding: 10px;
+}
+
+#something {
+  text-align: center;
+  font-size: 40px;
+  background-color: white;
+}
+
+.parallax {
+  width: 100%;
+  height: 65vh;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.parallax2 {
+  width: 100%;
+  height: 50vh;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: covercl;
+  transform: translateZ(-1px);
+}*/
+
+/* Stuff Here */
+
+/*.parallax {
+  perspective: 1px;
+  height: 100vh;
+  overflow-x: hidden;
+  overflow-y: auto;
+  background: url("../dist/img/kirbyBackground.png");
+  background-size: cover;
+
+}
+.parallax__layer {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  // background-color: rgba(0,0,0,0.1);
+}
+.parallax__group {
+  position: relative;
+  height: 500px;
+  transform-style: preserve-3d;
+}
+.parallax__group1 {
+  top: 1200px;
+  position: relative;
+  height: 800px;
+  transform-style: preserve-3d;
+}
+.parallax__group2 {
+  top: 2400px;
+  position: relative;
+  height: 800px;
+  transform-style: preserve-3d;
+}
+.parallax__group3 {
+  top: 3600px;
+  position: relative;
+  height: 800px;
+  transform-style: preserve-3d;
+}
+.parallax__group4 {
+  top: 4800px;
+  position: relative;
+  height: 900px;
+  transform-style: preserve-3d;
+}
+.parallax__layer--base {
+  transform: translateZ(10);
+  background-image: url("../dist/img/KirbyBanner.png");
+  background-repeat: no-repeat;
+  background-position: right;
+  opacity: 0.8;
+}
+.parallax__layer--two {
+  transform: translateZ(80px) scale(.55) translateX(-94%) translateY(-100%);
+  background-image: url("../dist/img/Kirbywithcake.png");
+ 
+  background-repeat: no-repeat;
+  background-position: center;
+  opacity: 0.8;
+}
+.parallax__layer--back {
+  transform: translateZ(-2px) scale(3.05);
+  background-image: url("../dist/img/dreamland.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.slide {
+  position: relative;
+  padding: 25vh 10%;
+  min-height: 100vh;
+  width: 100vw;
+  box-sizing: border-box;
+    box-shadow: 0 -1px 10px rgb(0 0 0 / 5%);
+    transform-style: inherit;
+}
+
+#imgdiver {
+    position: absolute;
+    top: 50%;
+    left: 60%;
+    width: 400px;
+    height: 150px;
+    transform: translateZ(0.5px) scale(0.55) translateX(-94%) translateY(-100%) rotate(0);
+}*/
+
+#title {
+  text-align: center;
+  font-size: 80px;
+  margin: 0px auto;
+  padding: 10px;
+}
+
+#subtitle {
+  text-align: center;
+  font-size: 20px;
+  margin: 0px auto;
+  padding: 10px;
+}
+
+.title {
+  width: 50%;
+
+  padding: 5%;
+  border-radius: 5px;
+  background: #425B80;
+  box-shadow: 0 0 8px rgba(0, 0, 0, .7);
+
+}
+
+@font-face {
+  font-family: 'Open Sans Condensed', sans-serif;
+  src: url('https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300&display=swap');
+}
+
+@font-face{
+  font-family:'Marck Script', cursive;
+  src: url('https://fonts.googleapis.com/css2?family=Marck+Script&display=swap');
+}
+
+html {
+  height: 100%;
+  overflow: hidden;
+
+}
+
+body { 
+  margin:0;
+  padding:0;
+  perspective: 1px;
+  transform-style: preserve-3d;
+  height: 100%;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  font-family: Open Sans Condensed, sans-serif;
+
+}
+
+h1 {
+  font-size: 250%
+}
+
+
+p {
+  font-size: 140%;
+  line-height: 150%;
+  color: black;
+  font-family: Open Sans Condensed, sans-serif;
+}
+
+.slide {
+  position: relative;
+  padding-bottom: 25vh;
+  padding-top: 25vh;
+  padding-left: 5vh;
+  padding-right: 5vh;
+  min-height: 75vh;
+  width: 100vw;
+  box-sizing: border-box;
+  box-shadow: 0 -1px 10px rgba(0, 0, 0, .7);
+  transform-style: inherit;
+}
+
+.topofpage {
+  position: relative;
+  min-height: 15vh;
+  width: 100vw;
+  box-sizing: border-box;
+  box-shadow: 0 -1px 10px rgba(0, 0, 0, .7);
+  transform-style: inherit;
+
+}
+
+
+.movingimg {
+  position: absolute;
+  top: 35%;
+  left: 35%;
+  width: 320px;
+  height: 240px;
+  transform: translateZ(.25px) scale(.75) translateX(-94%) translateY(-100%) rotate(2deg);
+  padding: 10px;
+  border-radius: 5px;
+  background: rgba(240,230,220, .7);
+  box-shadow: 0 0 8px rgba(0, 0, 0, .7);
+}
+
+.movingimg:last-of-type {
+  transform: translateZ(.4px) scale(.6) translateX(-104%) translateY(-40%) rotate(-5deg);
+}
+
+.movingimg2 {
+  position: absolute;
+  top: 35%;
+  left: 70%;
+  width: 320px;
+  height: 240px;
+  transform: translateZ(.25px) scale(.75) translateX(-80%) translateY(-95%) rotate(-2deg);
+  padding: 10px;
+  border-radius: 5px;
+  background: rgba(240,230,220, .7);
+  box-shadow: 0 0 8px rgba(0, 0, 0, .7);
+}
+
+.movingimg2:last-of-type {
+  transform: translateZ(.4px) scale(.6) translateX(-104%) translateY(-40%) rotate(5deg);
+}
+
+.movingimg3 {
+  position: absolute;
+  top: 35%;
+  left: 70%;
+  width: 320px;
+  height: 420px;
+  transform: translateZ(.25px) scale(.75) translateX(-94%) translateY(-100%) rotate(2deg);
+  padding: 10px;
+  border-radius: 5px;
+  background: rgba(240,230,220, .7);
+  box-shadow: 0 0 8px rgba(0, 0, 0, .7);
+}
+
+.movingimg3:last-of-type {
+  transform: translateZ(.4px) scale(.6) translateX(-110%) translateY(-40%) rotate(5deg);
+}
+
+.movingimg4 {
+  position: absolute;
+  top: 35%;
+  left: 35%;
+  width: 320px;
+  height: 420px;
+  transform: translateZ(.25px) scale(.75) translateX(-94%) translateY(-100%) rotate(2deg);
+  padding: 10px;
+  border-radius: 5px;
+  background: rgba(240,230,220, .7);
+  box-shadow: 0 0 8px rgba(0, 0, 0, .7);
+}
+
+.movingimg4:last-of-type {
+  transform: translateZ(.4px) scale(.6) translateX(-110%) translateY(-40%) rotate(-5deg);
+}
+
+.slide:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  box-shadow: 0 0 8px 1px rgba(0, 0, 0, .7);
+
+}
+
+.title {
+  width: 50%;
+  padding: 2%;
+  display: flex;
+  border-radius: 5px;
+  background-color: pink;
+  box-shadow: 0 0 8px rgba(0, 0, 0, .7);
+
+    #subsection1 {
+      background-color: white;
+      border-radius: 25px;
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+      width: 100%;
+      text-align: center;
+
+        h1 {
+          font-size: 55px;
+          margin: 1rem;
+        }
+        p {
+          text-align: center;
+          margin: 1rem;
+        }
+    }
+
+}
+
+.slide:nth-child(2n) .title {
+  margin-left: 0;
+  margin-right: auto;
+}
+
+.slide:nth-child(2n+1) .title {
+  margin-left: auto;
+  margin-right: 0;
+}
+
+
+.slide, .slide:before {
+  background: 50% 50% / cover;  
+}
+
+.header {
+  text-align: center;
+  font-size: 175%;
+  color: #fff;
+  text-shadow: 0 2px 2px #000;
+  background-color: pink;
+  z-index:2;
+}
+
+#title {
+  background-image: url("../dist/img/Kirbys.jpg");
+  z-index:2;
+}
+/*Source: https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.tumbip.com%2Ftag%2Fkirby%2520headers&psig=AOvVaw35g-9jNgMK_ZFyTX2n9UHE&ust=1650588407536000&source=images&cd=vfe&ved=0CAwQjRxqFwoTCLi9yJb3o_cCFQAAAAAdAAAAABAD*/
+
+.BackgroundThing {
+  transform: translateZ(.25px) scale(.75);
+ transform-origin: 50% 100%;
+ background-color: white;
+ border-radius: 25px;
+ color: black;
+}
+
+#title h1 {
+ transform: translateZ(.25px) scale(.75);
+ transform-origin: 50% 100%;
+ background-color: White;
+ border-radius: 25px;
+
+}
+
+#title h2 {
+ transform: translateZ(.25px) scale(.75);
+ transform-origin: 50% 100%;
+
+}
+
+#slide1:before {
+  background-image: url("../dist/img/Kirby'sDreamland2.png");
+  transform: translateZ(-1px) scale(2);
+}
+/*Source: http://www.thealmightyguru.com/Wiki/images/6/67/Kirby%27s_Dream_Land_-_GB_-_Map_-_Stage_1_-_Green_Greens.png*/
+
+#slide2 {
+  background-image: url("../dist/img/AmazingMirrorBackground.jpg");
+  z-index:2;
+}
+/*Source: https://steamuserimages-a.akamaihd.net/ugc/754844126807846853/8272A6B70731BEFDCF96EB57835C1AB82B27C75A/?imw=637&imh=358&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=true*/
+
+#slide3:before {
+  background-image: url("../dist/img/KirbyBannerCutGrass.png");
+  transform: translateZ(-1px) scale(2);
+}
+/*Source: https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/4fc5745f-92e2-440a-81b7-24ffa8336162/d9uissf-fe5809ee-c35e-4822-80ec-43ebf0f47683.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzRmYzU3NDVmLTkyZTItNDQwYS04MWI3LTI0ZmZhODMzNjE2MlwvZDl1aXNzZi1mZTU4MDllZS1jMzVlLTQ4MjItODBlYy00M2ViZjBmNDc2ODMucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.wJHYjzXyGOlNcqOsaHBrS0Bf4TOeCuacX_h4lEARulc*/
+
+
+#slide4 {
+  background-image: url("../dist/img/KirbyUltraBackground.gif");
+  z-index:2;
+}
+/*Source: https://cdn.wallpapersafari.com/30/69/KAimHC.gif */
+
+
+#slide5:before {
+  background-image: url("../dist/img/EpicYarnBackground.png");
+  transform: translateZ(-1px) scale(2);
+}
+/*Source: https://static.wikia.nocookie.net/kirby/images/0/00/KEEY_Grass_Land_artwork.png/revision/latest?cb=20190207064950&path-prefix=en */
+
+#slide6 {
+  background-image: url("../dist/img/ReturnToDreamLandBackground.jpg");
+  z-index:2;
+}
+/*Source: http://farm7.static.flickr.com/6087/6076607109_67cc9b26ce_o.jpg*/
+
+#slide7:before {
+  background-image: url("../dist/img/TripleBackground.jpg");
+  transform: translateZ(-1px) scale(2);
+}
+/*Source: https://www.polygon.com/2014/4/28/5617608/kirby-triple-deluxe-review-brainpower */
+
+#slide8 {
+  background-image: url("../dist/img/StarAlliesBackground.jpg");
+  z-index:2;
+}
+/*Source: https://nintendoeverything.com/wp-content/uploads/kirby-star-allies-art.jpg */
+
+#slide9:before {
+  background-image: url("../dist/img/ForgottenLandBackground.jpeg");
+  transform: translateZ(-1px) scale(2);
+}
+/*Source: https://img.game-news24.com/2022/03/The-Forgotten-Land-Demo-and-Kirby-are-on-Nintendo-eShop.jpeg*/
+
+#slide10 {
+  background-image: url("../dist/img/kirbyBackground.png");
+  z-index:2;
+}

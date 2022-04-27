@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Page Not Found</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    * {
+      line-height: 1.2;
+      margin: 0;
+    }
+
+    html {
+      color: #888;
+      display: table;
+      font-family: sans-serif;
+      height: 100%;
+      /*text-align: center;*/
+      width: 100%;
+      color: white;
+    }
+
+    body {
+      display: table-cell;
+      vertical-align: middle;
+      margin: 2em auto;
+      background-color: blue;
+      background-image: url("img/KirbyBannerCutGrass.png"), url("img/KirbyCloudTile.jpg") ;
+      background-repeat: no-repeat, repeat; /* Do not repeat the image */
+      background-size: 1500px 530px, 1100px 230px;
+      
+    }
+
+    h1 {
+      font-size: 2em;
+      font-weight: 400;
+      text-align: center;
+    }
+
+    .box{
+      text-align: center;
+      /*width: 280px;
+      height:  500px;*/
+      background-color: lightblue;
+    }
+
+    p {
+      margin: 0 auto;
+      width: 280px;
+      text-align: center;
+    }
+
+    @media only screen and (max-width: 280px) {
+
+      body,
+      p {
+        width: 95%;
+      }
+
+      h1 {
+        font-size: 1.5em;
+        margin: 0 0 0.3em;
+      }
+
+    }
+    
+    .kirby 
+      {
+        width: 150px;
+        animation-name: walking;
+        animation-duration: 5s;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+      }
+
+    @keyframes walking
+    {
+        from {opacity: 0; transform: translate(100px, 0px);}
+        5% {opacity: 1;}
+        95% {opacity: 1; transform: translate(1100px, 0px);}
+        to { opacity: 0; transform: translate(1100px, 0px);}    
+    }
+
+  </style>
+</head>
+
+<body>
+  <img class="kirby" src="https://i.pinimg.com/originals/e3/6f/b6/e36fb6c27b4f1bb06e55e1fd58d6ff14.gif"/><!-- via GIPHY -->
+  <div class="box">
+    <h1>Page Not Found</h1>
+  <p>Sorry, but the page you were trying to view does not exist.</p>
+  </div>
+</body>
+
+</html>
+<!-- IE needs 512+ bytes: https://docs.microsoft.com/archive/blogs/ieinternals/friendly-http-error-pages -->

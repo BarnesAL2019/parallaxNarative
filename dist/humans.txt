@@ -1,0 +1,17 @@
+# humanstxt.org/
+# The humans responsible & technology colophon
+
+# TEAM
+
+    Name: Abby Barnes
+    Contributions: Created the 404 page, favicon, humans.txt and main scss
+
+
+# THANKS
+
+    Thank you for visiting my site! 
+
+# TECHNOLOGY COLOPHON
+
+    CSS3, HTML5
+    Apache Server Configs, jQuery, Modernizr, Normalize.css
